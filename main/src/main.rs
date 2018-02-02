@@ -1,5 +1,3 @@
-extern crate app;
-
 use std::ffi::CString;
 use std::os::raw;
 use std::{thread, time};
