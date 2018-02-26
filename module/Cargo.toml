@@ -6,4 +6,4 @@ authors = ["Damien Radtke <code@getbraintree.com>"]
 [dependencies]
 
 [lib]
-crate-type = ["dylib"]
+crate-type = ["cdylib"]
