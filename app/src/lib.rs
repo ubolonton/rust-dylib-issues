@@ -1,4 +1,4 @@
 #[no_mangle]
-pub unsafe extern "C" fn testing() {
-    println!("YES!");
+pub unsafe extern "C" fn init() {
+    println!("Hello!!");
 }
