@@ -3,8 +3,5 @@ name = "main"
 version = "0.1.0"
 authors = ["Damien Radtke <damienradtke@gmail.com>"]
 
-[dependencies.app]
-path = "../app"
-
 [dependencies]
 libloading = "0.4.3"
