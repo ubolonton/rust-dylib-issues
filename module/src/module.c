@@ -2,5 +2,5 @@
 
 void init(void)
 {
-    puts("Hello from C module");
+    puts("Hello from C module!!");
 }

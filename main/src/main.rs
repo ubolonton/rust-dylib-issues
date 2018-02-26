@@ -16,8 +16,8 @@ fn image_count() -> u32 {
     unsafe { _dyld_image_count() }
 }
 
-const LIB_PATH: &'static str = "../module-c/libmodule.so";
 // const LIB_PATH: &'static str = "../module/target/debug/libmodule.dylib";
+const LIB_PATH: &'static str = "../module/target/libmodule-c.so";
 
 fn main() {
     loop {
@@ -31,7 +31,7 @@ fn main() {
             let symbol = b"init";
             let raw_init = dlsym(handle, CString::new(&symbol[..]).unwrap().into_raw());
             if raw_init.is_null() {
-                println!("Failed to retrieve get_message symbol: {}", CStr::from_ptr(dlerror()).to_string_lossy());
+                println!("Failed to retrieve init symbol: {}", CStr::from_ptr(dlerror()).to_string_lossy());
                 return;
             }
 
