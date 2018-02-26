@@ -2,7 +2,8 @@
 #include <stdio.h>
 #include <unistd.h>
 
-#define LIB_PATH "../app/target/debug/libapp.dylib"
+/* #define LIB_PATH "../module/target/debug/libmodule.dylib" */
+#define LIB_PATH "../module/target/libmodule-c.so"
 
 int main(int argc, char *argv[])
 {
@@ -15,13 +16,13 @@ int main(int argc, char *argv[])
 			return 1;
 		}
 
-		char *(*get_message)(void) = dlsym(handle, "get_message");
-		if (!get_message) {
-			printf("Failed to retrieve get_message symbol: %s\n", dlerror());
+		void *(*init)(void) = dlsym(handle, "init");
+		if (!init) {
+			printf("Failed to retrieve init symbol: %s\n", dlerror());
 			return 1;
 		}
 
-		printf("Message: %s\n", get_message());
+		init();
 
 		if (dlclose(handle)) {
 			printf("Failed to close handle: %s\n", dlerror());
