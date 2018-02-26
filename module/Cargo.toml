@@ -1,5 +1,5 @@
 [package]
-name = "app"
+name = "module"
 version = "0.1.0"
 authors = ["Damien Radtke <code@getbraintree.com>"]
 
