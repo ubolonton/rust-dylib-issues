@@ -4,8 +4,8 @@ use std::os::raw;
 use std::{thread, time};
 use libloading::{Library, Symbol};
 
-// const LIB_PATH: &'static str = "../module/target/debug/libmodule.dylib";
-const LIB_PATH: &'static str = "../module/target/libmodule-c.so";
+const LIB_PATH: &'static str = "../module/target/debug/libmodule.dylib";
+// const LIB_PATH: &'static str = "../module/target/libmodule-c.so";
 
 extern "C" {
     fn _dyld_image_count() -> u32;

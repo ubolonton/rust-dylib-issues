@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <unistd.h>
 
-/* #define LIB_PATH "../module/target/debug/libmodule.dylib" */
-#define LIB_PATH "../module/target/libmodule-c.so"
+#define LIB_PATH "../module/target/debug/libmodule.dylib"
+/* #define LIB_PATH "../module/target/libmodule-c.so" */
 
 int main(int argc, char *argv[])
 {

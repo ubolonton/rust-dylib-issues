@@ -16,8 +16,8 @@ fn image_count() -> u32 {
     unsafe { _dyld_image_count() }
 }
 
-// const LIB_PATH: &'static str = "../module/target/debug/libmodule.dylib";
-const LIB_PATH: &'static str = "../module/target/libmodule-c.so";
+const LIB_PATH: &'static str = "../module/target/debug/libmodule.dylib";
+// const LIB_PATH: &'static str = "../module/target/libmodule-c.so";
 
 fn main() {
     loop {
